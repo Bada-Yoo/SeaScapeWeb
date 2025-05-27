@@ -53,4 +53,10 @@ public class RoomService {
     public void approveRoom(String roomId, String storeUniqueId) {
         roomdao.assignStoreToRoom(roomId, storeUniqueId);
     }
+    
+    //해당 매장 테마찾기
+    public List<String> getTop3ThemesByLocation(String location) {
+        return new RoomDAO().getTop3RoomNamesByLocation(location);
+    }
+
 }

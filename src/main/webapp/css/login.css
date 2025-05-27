@@ -7,7 +7,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  
 }
+
 
 .login-container {
   background-color: white;
@@ -16,6 +18,11 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 360px;
+}
+.logo a,
+.user-nav a {
+  text-decoration: none;
+  color: white;
 }
 
 h2 {

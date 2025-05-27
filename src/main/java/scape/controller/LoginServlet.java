@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
                 UsersDTO user = new UsersService().login(id, pw);
                 if (user != null) {
                     session.setAttribute("loginUser", user);
-                    res.sendRedirect("storeList");
+                    res.sendRedirect("user/dashboard.jsp");
                 } else {
                     res.sendRedirect("login.jsp?error=user");
                 }

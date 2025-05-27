@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+/* 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5faff;
+  padding-top: 100px;
+  margin: 0;
+  color: #003d4d;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.section-gap {
+  margin-top: 5rem;
+}
+
+/* ✅ 네비게이션 바 (통일 스타일) */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 123, 150, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav .logo a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 인트로 섹션 */
+.main-intro-box {
+  background: linear-gradient(to right, #00bcd4, #0097a7);
+  padding: 5rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.main-intro-box .inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.main-intro-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #008ba3;
+}
+
+.main-intro-box p {
+  font-size: 1.1rem;
+  color: #008ba3;
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.action-btn,
+.reserve-button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #007c91;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* 공지사항 섹션 */
+.comnotice {
+  background-color: #f5faff;
+  text-align: center;
+}
+
+.comnotice h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.comnotice-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.comnotice-item {
+  width: 220px;
+  min-height: 280px;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.comnotice-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.comnotice-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #003d4d;
+}
+
+.comnotice-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* 푸터 */
+.footer-box {
+  background: #003d4d;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-box .inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-box p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-box .slogan {
+  margin: 1rem 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.footer-box .copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* 첫 섹션 배경 이미지 */
+#welcome {
+  background: url('../images/wave2.gif') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome .inner {
+  background-color: #f5faff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#welcome p {
+  font-size: 1.4rem;
+}
+
+#welcome .action-btn {
+  font-size: 1.1rem;
+}

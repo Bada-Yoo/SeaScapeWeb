@@ -146,7 +146,6 @@ public class ReservationScheduleDAO {
             pst.setInt(3, scheduleId);
 
             int result = pst.executeUpdate();
-            conn.commit();
             return result > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -182,7 +181,6 @@ public class ReservationScheduleDAO {
 
             pst.setInt(1, scheduleId);
             int result = pst.executeUpdate();
-            conn.commit();
             return result > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -220,7 +218,6 @@ public class ReservationScheduleDAO {
             pst.setString(1, storeId);
             pst.setDate(2, Date.valueOf(date));
             int result = pst.executeUpdate();
-            conn.commit();
             return result > 0;
 
         } catch (SQLException e) {

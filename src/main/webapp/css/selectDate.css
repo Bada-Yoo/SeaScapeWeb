@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6fcff;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 123, 150, 0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .logo a,
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ✅ 본문 컨테이너 */
+.container {
+  display: flex;
+  margin-top: 120px;
+  padding: 40px;
+  gap: 50px;
+}
+
+/* ✅ 이미지 영역 */
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.image-section img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.image-section h2 {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  color: #003d4d;
+}
+
+/* ✅ 날짜 선택 영역 */
+.date-section {
+  flex: 2;
+}
+
+.date-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.date-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+}
+
+.date-section li button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.date-section li button:hover {
+  background-color: #0097a7;
+}

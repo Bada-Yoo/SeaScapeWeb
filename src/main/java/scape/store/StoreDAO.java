@@ -140,7 +140,4 @@ public class StoreDAO {
 	    return list;
 	}
 
-
-
-
 }

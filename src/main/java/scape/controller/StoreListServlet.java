@@ -2,28 +2,34 @@ package scape.controller;
 
 import scape.store.StoreDTO;
 import scape.store.StoreService;
+import scape.room.RoomService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
-@WebServlet("/storeList")
+@WebServlet("/reservation")
 public class StoreListServlet extends HttpServlet {
     private final StoreService storeService = new StoreService();
+    private final RoomService roomService = new RoomService(); 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 1. 매장 리스트 가져오기
+        // 모든 매장 정보 가져오기
         List<StoreDTO> storeList = storeService.getAllStoreInfo();
+        Map<String, List<String>> roomThemes = new HashMap<>();
 
-        // 2. JSP로 전달
+        for (StoreDTO store : storeList) {
+            String location = store.getLOCATION();
+            List<String> topThemes = roomService.getTop3ThemesByLocation(location); 
+            roomThemes.put(location, topThemes);
+        }
+
         req.setAttribute("storeList", storeList);
+        req.setAttribute("roomThemes", roomThemes);
 
-        // 3. forward to dashboard.jsp
-        req.getRequestDispatcher("user/dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("user/reservation.jsp").forward(req, resp);
     }
-} 
+}

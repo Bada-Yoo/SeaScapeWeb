@@ -3,7 +3,6 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>SeaScape 로그인</title>
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>

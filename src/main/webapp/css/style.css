@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* SeaScape 공통 스타일 */
 
 * {
   margin: 0;
@@ -13,6 +12,7 @@ body {
   background-color: #ffffff;
   font-size: 18px;
 }
+
 nav {
   position: fixed;
   top: 0;

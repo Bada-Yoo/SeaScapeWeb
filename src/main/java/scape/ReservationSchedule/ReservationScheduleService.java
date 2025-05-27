@@ -5,7 +5,9 @@ import scape.room.RoomDTO;
 import scape.users.UsersDAO;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ReservationScheduleService {
     private final ReservationScheduleDAO dao = new ReservationScheduleDAO();
@@ -19,7 +21,7 @@ public class ReservationScheduleService {
     public Map<RoomDTO, List<ReservationScheduleDTO>> getAvailableSchedulesByStoreAndDate(String store, String date) {
         return dao.selectSchedulesByStoreAndDate(store, date);
     }
-
+    
     // roomId + 날짜 + 시간 기준 schedule_id 조회
     public int getScheduleId(String roomId, String date, String time) {
         return dao.selectScheduleId(roomId, date, time);
@@ -55,6 +57,12 @@ public class ReservationScheduleService {
     public String getUserName(String userId) {
         return new UsersDAO().findUserNameById(userId);
     }
+    
+    // ReservationScheduleService.java
+    public Map<RoomDTO, List<ReservationScheduleDTO>> getAvailableSchedulesByStoreLocationAndDate(String storeLocation, String date) {
+        return dao.selectSchedulesByStoreAndDate(storeLocation, date); 
+    }
+
 
 
 

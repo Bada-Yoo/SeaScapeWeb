@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6fcff;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+nav.user-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 123, 150, 0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logo a,
+.user-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* 왼쪽 매장 요약 */
+.store-summary {
+  width: 25%;
+  text-align: center;
+  background: #f4faff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.store-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.store-divider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin-bottom: 1rem;
+}
+
+.store-summary img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.store-date {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* 테마 카드 영역 */
+.theme-list {
+  width: 75%;
+}
+
+.theme-card {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  align-items: flex-start;
+}
+
+.theme-info {
+  width: 40%;
+}
+
+.divider {
+  width: 1px;
+  border-left: 2px dashed #ccc;
+  height: auto;
+  margin: 0 20px;
+}
+
+.time-slots {
+  width: 50%;
+  text-align: left;
+}
+
+.time-slots h4 {
+  margin-bottom: 1rem;
+  color: #005a7d;
+}
+
+.time-slots form {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.time-slots button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.time-slots button:hover {
+  background-color: #008ba3;
+}

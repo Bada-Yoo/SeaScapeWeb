@@ -318,6 +318,37 @@ public class RoomDAO {
         }
         return list;
     }
+    
+    //매장 방 조회
+    public List<String> getTop3RoomNamesByLocation(String location) {
+        List<String> roomNames = new ArrayList<>();
+        String sql = """
+        	    SELECT * FROM (
+        	        SELECT r.room_name 
+        	        FROM room r
+        	        JOIN store s ON r.store_unique_id = s.store_unique_id
+        	        WHERE s.location = ?
+        	        ORDER BY r.room_name
+        	    )
+        	    WHERE ROWNUM <= 3
+        	""";
+
+
+
+        try (Connection conn = DBUtil.getConnection();
+             PreparedStatement pst = conn.prepareStatement(sql)) {
+            pst.setString(1, location);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                roomNames.add(rs.getString("room_name"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return roomNames;
+    }
+
 
 
 
